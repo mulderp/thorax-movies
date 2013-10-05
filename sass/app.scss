@@ -1,0 +1,137 @@
+.movie {
+    float: left;
+    width: 160px;
+    min-height: 420px;
+    background-color: #001633;
+    color: white;
+    margin: 10px;
+    padding: 5px 10px 5px 10px;
+
+    h3 {
+        margin: 0;
+    }
+
+    b {
+      color: #FFDA4A;
+      width: 140px;
+      float: right;
+    }
+}
+
+.details {
+    width: 50%;
+    margin-right: 100px;
+    background-color: #159686;
+    color: white;
+    float: right;
+    padding: 10px;
+}
+
+.selected {
+    margin: 5px;
+    border: 5px #82B9FF solid;
+}
+
+.movies {
+  float: left;
+}
+
+
+.hidden {
+  display: hidden;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #4D6D96;
+}
+
+aside {
+    width: 240px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #00387F;
+
+    h3 {
+        color: white;
+        padding-left: 3px;
+    }
+
+    h4 {
+        margin: 0;
+        padding-top: 10px;
+        color: #4C9BFF;
+
+    }
+
+    li, a {
+            color: #72A3E0;
+    }
+
+    hr {
+            color: #0070FF;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            padding-top: 5px;
+            color: #72A3E0;
+        }
+    }
+}
+
+.content {
+    float: left;
+    padding-left: 10px;
+    width: 70%;
+
+}
+
+// filter for genres
+.filter-genres label
+{
+    display: block;
+    padding-right: 10px;
+    white-space: nowrap;
+    width: 80%;
+    float: right;
+}
+
+.filter-genres input
+{
+    vertical-align: middle;
+}
+
+.filter-genres label span
+{
+    vertical-align: middle;
+}
+
+// header
+header {
+    height: 100px;
+
+    nav.controls {
+      width: 200px;
+      float: left;
+      display: inline-block;
+      padding-top: 30px;
+      padding-left: 40px;
+
+      &, a {
+        color: #72A3E0;
+      }
+    }
+
+   h2 {
+       color: white;
+       padding-left: 20px;
+       float: left;
+       display: inline-block;
+   }
+
+}
+
