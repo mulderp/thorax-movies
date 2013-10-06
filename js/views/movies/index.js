@@ -17,6 +17,17 @@ define([
       console.log('select: ' + model.get('title'));
       channel.trigger('movie:selected', model.get('id'));
     },
+    selectGenre: function(genre) {
+      var filters = _.keys(this.collection._filtered._filters)
+      if (_.contains(filters, genre)) { 
+        this.collection.removeFilter(genre);
+      }
+      else
+      {
+        this.collection.filterBy(genre, function(m) { 
+          return (_.findWhere(m.get('genres'), genre))});
+      }
+    },
     template: template,
     itemTemplate: item,
     initialize: function() {
@@ -26,6 +37,8 @@ define([
             .setPerPage(4)
             .setSort('showtime', 'desc');
       movies.fetch();
+
+      this.listenTo(channel, 'genres:select', this.selectGenre);
     }
   });
 });
