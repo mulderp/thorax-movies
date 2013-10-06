@@ -1,9 +1,15 @@
 define([
-  'view',
-  'templates/filter/ratings'
-], function (View, template) {
-  return View.extend({
+  'backbone',
+  'collection-view',
+  'templates/filter/ratings',
+  'templates/filter/item'
+], function (Backbone, CollectionView, template, item) {
+  return CollectionView.extend({
     name: 'filter/ratings',
-    template: template
+    itemTemplate: item,
+    template: template,
+    initialize: function() {
+      this.collection = new Backbone.Collection([{name: 1},{name: 2},{name: 3},{name: 4},{name: 5}]);
+    }
   });
 });

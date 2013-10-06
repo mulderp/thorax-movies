@@ -1,15 +1,16 @@
 require([
   'jquery',
   'backbone',
-  'views/root'
-], function ($, Backbone, RootView) {
+  'views/root',
+  'routers/movies'
+], function ($, Backbone, RootView, MoviesRouter) {
   
   initialize(function(next) {
     // Load any data that your app requires to boot
     // and initialize all routers here, the callback
     // `next` is provided in case the operations
-    // needed are aysynchronous
-    
+    // needed are aysynchronous 
+    new MoviesRouter;
 
     next();
   });

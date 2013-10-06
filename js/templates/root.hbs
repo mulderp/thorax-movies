@@ -1,4 +1,35 @@
 {{! Calling RootView.getInstance().setView(view)
     will place a view where layout-element is called below. }}
     
-{{layout-element}}
+<header>
+  <div class="home"><a href="/">Munich Cinema</a></div>
+  <nav>
+  </nav>
+</header>
+<aside id="filter" class="sidebar">
+</aside>
+<div class="content">
+   <div class="header">
+     <h2>Upcoming Movies</h2>
+       <nav id="controls" class="controls">
+         <div id="paginate">
+           <a href="#" class="previous" id="previous">Previous</a> | 
+           <a href="#" class="next" id="next">Next</a>
+         </div>
+         <div id="sorting" class="sort">
+           <span>Sort Movies</span>
+           <ul>
+             <li><a href="#" class="" id="by_title">By Title</a></li>
+             <li><a href="#" class="" id="by_showtime">By Showtime</a></li>
+             <li><a href="#" class="" id="by_rating">By Rating</a></li>
+           </ul>
+         </div>
+       </nav>
+   </div>
+
+   <div id="movies" class="movies">
+
+     {{layout-element}}
+
+   </div>
+</div>

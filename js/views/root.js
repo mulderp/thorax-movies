@@ -1,10 +1,16 @@
 define([
   'layout-view',
-  'templates/root'
-], function(LayoutView, rootTemplate) {
+  'templates/root',
+  'views/filter/layout'
+], function(LayoutView, rootTemplate, FilterUI) {
   var RootView = LayoutView.extend({
     name: 'root',
-    template: rootTemplate
+    template: rootTemplate,
+    initialize: function() {
+    //  this.header = new HeaderLayout;
+    //  this.footer = new FooterLayout;
+      this.filter = new FilterUI();
+    }
   });
   
   var instance;
@@ -12,6 +18,8 @@ define([
     if (!instance) {
       instance = new RootView;
       instance.appendTo(target || document.body);
+
+      instance.filter.appendTo($('#filter'));
     }
     return instance;
   };

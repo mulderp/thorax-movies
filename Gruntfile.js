@@ -84,7 +84,14 @@ module.exports = function(grunt) {
         options: {
           hostname: hostname,
           base: paths.public,
-          port: port
+          port: port,
+          middleware: function (connect, options) {
+              var config = [ connect.static(options.base),
+                             connect.directory(options.base) ];
+             var proxy = require('grunt-connect-proxy/lib/utils').proxyRequest;
+             config.unshift(proxy);
+             return config;
+           }
         }
      },
      proxies: [
@@ -254,6 +261,7 @@ module.exports = function(grunt) {
     'scripts:development',
     'thorax:inspector',
     'connect:development',
+    'configureProxies',
     'open-browser',
     'watch'
   ]);
