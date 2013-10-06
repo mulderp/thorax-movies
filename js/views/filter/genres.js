@@ -1,11 +1,10 @@
 define([
   'channel',
   'collection-view',
-  'models/filter/item',
   'collections/genres',
   'templates/filter/genres',
   'templates/filter/item'
-], function (channel, CollectionView, Genre, Genres, template, item) {
+], function (channel, CollectionView, Genres, template, item) {
   return CollectionView.extend({ 
     events: {
       'click a': 'toggleFilter' 
@@ -17,10 +16,11 @@ define([
       ev.preventDefault();
       var model = $(ev.target).model();
       console.log(model.get('name'));
+      model.toggle();
       channel.trigger('genres:select', model.get('name'));
     },
     initialize: function() {
-      this.collection = new Genres({model: Genre});
+      this.collection = new Genres();
       //this.listenTo(this.genres, "sync", this.render);
       this.collection.fetch();
     }
