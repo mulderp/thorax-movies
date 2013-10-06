@@ -4,6 +4,6 @@
   "dependencies": {
     "requirejs": "~2.1",
     "thorax": "~2.0",
-    "bootstrap": "~3.0"
+    "backbone.obscura": "0.1.0"
   }
 }

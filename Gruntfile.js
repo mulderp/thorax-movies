@@ -177,6 +177,7 @@ module.exports = function(grunt) {
         'handlebars': '../bower_components/handlebars/handlebars.runtime',
         'backbone': '../bower_components/backbone/backbone',
         'thorax': '../bower_components/thorax/thorax',
+        'obscura': '../bower_components/backbone.obscura/backbone.obscura',
       },
       shim: {
         'handlebars': {
