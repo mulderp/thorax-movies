@@ -8,7 +8,7 @@ define([
     name: 'filter/layout',
     template: template,
     initialize: function() {
-      this.ratings = new RatingsUI; 
+      //this.ratings = new RatingsUI; 
       this.genres = new GenresUI();
     }
   });

@@ -1,9 +1,15 @@
 define([
-  'view',
-  'templates/movies/index'
-], function (View, template) {
-  return View.extend({
+  'collection-view',
+  'collections/movies',
+  'templates/movies/index',
+  'templates/movies/thumb'
+], function (CollectionView, Movies, template, item) {
+  return CollectionView.extend({
     name: 'movies/index',
-    template: template
+    template: template,
+    itemTemplate: item,
+    initialize: function() {
+      this.collection = new Movies;
+    }
   });
 });
