@@ -24,6 +24,7 @@ module.exports = function(grunt) {
         js: 'js',
         css: 'css',
         templates: 'js/templates',
+        helpers: 'js/templates/helpers',
         views: 'js/views',
         models: 'js/models',
         collections: 'js/collections'
@@ -145,7 +146,7 @@ module.exports = function(grunt) {
     },
     watch: {
       handlebars: {
-        files: [paths.templates + '/**/*.hbs'],
+        files: [paths.templates + '/**/*.hbs', paths.templates + '/**/*.handlebars',  paths.helpers + "/**/*.js"],
         tasks: ['templates']
       },
       scripts: {
@@ -174,13 +175,18 @@ module.exports = function(grunt) {
       paths: {
         'jquery': '../bower_components/jquery/jquery',
         'underscore': '../bower_components/underscore/underscore',
-        'handlebars': '../bower_components/handlebars/handlebars.runtime',
+        'handlebars': './templates/helpers/selected',
+        'handlebarsCore': '../bower_components/handlebars/handlebars.runtime',
         'backbone': '../bower_components/backbone/backbone',
         'thorax': '../bower_components/thorax/thorax',
         'obscura': '../bower_components/backbone.obscura/backbone.obscura',
       },
       shim: {
+        'handlebarsCore': {
+          exports: 'Handlebars'
+        },
         'handlebars': {
+          deps: ['handlebarsCore'],
           exports: 'Handlebars'
         },
         'backbone': {

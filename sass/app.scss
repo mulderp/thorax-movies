@@ -182,4 +182,8 @@ header {
   height: 25px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  &.selected {
+    border: 1px red solid;
+  }
 }
