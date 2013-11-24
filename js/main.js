@@ -2,16 +2,17 @@ require([
   'jquery',
   'backbone',
   'views/root',
+  'routers/browser',
   'helpers',
-], function ($, Backbone, RootView) {
+], function ($, Backbone, RootView, Browser) {
 
   initialize(function(next) {
     // Load any data that your app requires to boot
     // and initialize all routers here, the callback
     // `next` is provided in case the operations
     // needed are aysynchronous
+    var browser = new Browser(); 
     
-
     next();
   });
 
