@@ -40,7 +40,7 @@ module.exports = function(grunt) {
     hostname: 'localhost',
     templates: {},
     paths: {
-      'public': 'public',
+      'public': '',
       dist: 'dist',
       tmp: 'tmp',
       distOutput: {
@@ -79,6 +79,7 @@ module.exports = function(grunt) {
    * livereload tests + app + jshint when saving a file
    */
   grunt.registerTask('default', [
+    'configureProxies',
     'build',
     'styles:development',
     'thorax:inspector',

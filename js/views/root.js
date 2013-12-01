@@ -8,8 +8,8 @@ define([
     name: 'root',
     template: rootTemplate,
     initialize: function() {
-      this.header = new Header;
-      this.footer = new Footer;
+      this.header = new Header();
+      this.footer = new Footer();
     }
   });
 

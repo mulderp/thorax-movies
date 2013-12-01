@@ -1,0 +1,83 @@
+@import './colors.css.scss';
+
+.filters {
+  h3 {
+    display: block;
+    float: left;
+    margin-right: 20px;
+  }
+
+  ul {
+      list-style: none;
+      width: 90%;
+
+      li {
+          padding-top: 5px;
+          color: #72A3E0;
+      }
+  }
+
+}
+
+.filter-genres {
+
+    & > li {
+      list-style: none;
+      float: left;
+      padding: 8px 7px 0 7px;
+    }
+
+    li {
+      color: #72A3E0;
+      margin: 0 0 1px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    li:hover {
+      background-color: lighten($dark-blue, 20%);
+    }
+
+    li.selected {
+      padding-left: 5px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+      border: 2px #82B9FF solid;
+      border-radius: 3px;
+      color: white;
+    }
+
+    .genre-count {
+      margin: 0 0 0 2px;
+      font-size: 10px;
+      padding: 1px 3px;
+      color: rgba(255,255,255,0.9);
+      background: rgba(0,0,0,0.18);
+      border-radius: 3px;
+      box-shadow: inset -1px -1px rgba(0,0,0,0.15);
+    }
+
+}
+
+// filter for genres
+.filter-genres label
+{
+    display: block;
+    padding-right: 10px;
+    white-space: nowrap;
+    width: 80%;
+    float: right;
+}
+
+.filter-genres input
+{
+    vertical-align: middle;
+}
+
+.filter-genres label span
+{
+    vertical-align: middle;
+}
+

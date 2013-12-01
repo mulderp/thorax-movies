@@ -16,6 +16,7 @@
     "text": "requirejs/text#~2.0.10",
     "requirejs-hbs": "trombom/requirejs-hbs#v0.1",
     "require-cs": "~0.4.4",
-    "jquery": "1.9.0"
+    "jquery": "1.9.0",
+    "backbone.obscura": "latest"
   }
 }

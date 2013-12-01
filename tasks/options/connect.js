@@ -1,4 +1,5 @@
 var grunt = require('grunt');
+var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
 
 module.exports = {
   development: {
@@ -8,12 +9,13 @@ module.exports = {
       port: grunt.config('settings.port'),
       middleware: function (connect, options) {
         return [
+          proxySnippet,
           require('connect-livereload')({port: grunt.config('settings.liveReloadPort')}),
           connect.static(options.base),
           connect.directory(options.base)
         ];
       }
-    }
+    },
   },
   production:  {
     options: {
@@ -23,6 +25,22 @@ module.exports = {
       keepalive: true
     }
   },
+  proxies: [
+    {
+      context: '/movies',
+      host: '0.0.0.0',
+      port: 5000,
+      https: false,
+      changeOrigin: false
+    },
+    {
+      context: '/genres',
+      host: '0.0.0.0',
+      port: 5000,
+      https: false,
+      changeOrigin: false
+    }
+  ],
   CIServer: {
     options: {
       base: '.',

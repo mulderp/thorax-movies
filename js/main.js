@@ -1,17 +1,19 @@
 require([
   'jquery',
   'backbone',
+  'collections/movies',
   'views/root',
   'routers/browser',
   'helpers',
-], function ($, Backbone, RootView, Browser) {
+], function ($, Backbone, Movies, RootView, Browser) {
 
   initialize(function(next) {
     // Load any data that your app requires to boot
     // and initialize all routers here, the callback
     // `next` is provided in case the operations
     // needed are aysynchronous
-    var browser = new Browser(); 
+    var movies = Movies.getInstance();
+    var browser = new Browser({movies: movies}); 
     
     next();
   });

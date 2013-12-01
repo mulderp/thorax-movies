@@ -26,7 +26,7 @@ module.exports = {
       {
         expand: true,
         cwd: grunt.config('paths.css'),
-        src: '*.css',
+        src: ['*.css', 'css/fonts/*'],
         dest: grunt.config('paths.output.css')
       }
     ]

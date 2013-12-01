@@ -1,0 +1,23 @@
+<img src="http://placekitten.com/100/100">
+
+<hr>
+<h3>{{#link "movies/{{id}}" expand-tokens=true}}{{title}}{{/link}}</h3>
+
+<div class="rating">
+</div>
+
+<div class="genres">
+  {{genres}}
+</div>
+
+<div class="caption">
+  {{length}} mins
+  <div class="rating">
+    {{stars rating}}
+  </div>
+  <div class="details">
+    <span>{{director}}</span>
+    <span>{{year}}</span>
+    <p>{{description}}</p>
+  </div>
+</div>
