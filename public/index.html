@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/app.css" type="text/css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/app.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+  </head>
+  <body>
 
-    <script data-main="js/main" src="/js/require.js"></script>
-</body>
+    <script>
+      var require = {
+        baseUrl: '../js'
+      }
+    </script>
+
+    <script data-main="../require-config" src="../bower_components/requirejs/require.js"></script>
+  </body>
 </html>

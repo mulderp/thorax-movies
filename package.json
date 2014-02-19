@@ -1,31 +1,43 @@
 {
-  "name": "moviedb",
-  "appName": "Moviedb",
+  "name": "pipefishbook",
+  "appName": "Pipefishbook",
   "version": "0.0.0",
   "dependencies": {
-    "underscore": "1.5.2",
-    "restify": "latest" 
+    "connect": "~2.10.x"
   },
   "devDependencies": {
-    "grunt-contrib-connect": "0.1.1",
+    "grunt-contrib-connect": "~0.5.0",
     "grunt": "~0.4",
-    "thorax-inspector": "0.2.4",
-    "open": "0.0.3",
+    "thorax-inspector": "~0.2.0",
     "bower": "~0.10",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
+    "grunt-sass": "latest",
     "matchdep": "~0.1.2",
     "grunt-cli": "~0.1.9",
-    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-contrib-requirejs": "~0.4.1",
-    "grunt-contrib-handlebars": "~0.5.10",
-    "grunt-sass": "latest",
-    "grunt-connect-proxy": "latest",
-    "require-handlebars-plugin": "git://github.com/SlexAxton/require-handlebars-plugin.git"
+    "connect-livereload": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "load-grunt-config": "~0.6.0",
+    "karma": "~0.10.4",
+    "karma-mocha": "~0.1.0",
+    "grunt-karma": "~0.6.2",
+    "mocha-phantomjs": "~3.1.6",
+    "phantomjs": "~1.9.2-2",
+    "grunt-mocha-phantomjs": "~0.3.1",
+    "grunt-contrib-jshint": "~0.7.1",
+    "karma-coverage": "~0.1.2",
+    "express": "~3.4.6",
+    "express-namespace": "~0.1.1",
+    "request": "~2.29.0",
+    "karma-safari-launcher": "~0.1.1",
+    "grunt-contrib-less": "~0.9.0",
+    "underscore": "latest"
   },
   "scripts": {
-    "start": "node ./node_modules/.bin/grunt",
+    "start": "node ./server.js",
     "test": "node ./node_modules/.bin/grunt test"
   },
   "engines": {
